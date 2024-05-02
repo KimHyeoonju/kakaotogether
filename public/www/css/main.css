@@ -1,2 +1,13 @@
 .main {
 }
+
+.main-inner {
+  display: flex;
+  margin: 20px auto 0;
+
+  max-width: 1120px;
+  margin-top: 30px;
+  padding-bottom: 46px;
+
+  justify-content: space-between;
+}
