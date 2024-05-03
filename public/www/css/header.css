@@ -1,3 +1,36 @@
 .header {
   height: 70px;
+  background-color: bisque;
+  border-bottom: 1px solid;
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1120px;
+  height: 100%;
+  margin: 0px auto;
+}
+.header-logo {
+}
+.header-logo-link {
+}
+.header-logo-img {
+  display: block;
+  width: 115px;
+  height: 70px;
+}
+
+.header-menu {
+}
+.header-menu-list {
+  display: flex;
+}
+.header-menu-list a {
+  padding: 0 14px;
+}
+.header-icon {
+}
+.header-icon-list {
+  display: flex;
 }

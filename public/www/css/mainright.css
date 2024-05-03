@@ -1,7 +1,21 @@
 .main-right {
   width: 360px;
+  height: auto;
+}
+.main-right-div {
+}
+.main-right-slide {
+  background-color: aquamarine;
+}
 
-  /* 아래는 배치 확인용 코드 - 삭제 요망 */
-  height: 100px;
-  background-color: black;
+.mr-slide-donation {
+}
+.mr-slide-review {
+}
+
+.main-right-banner {
+}
+.main-right-score {
+}
+.main-right-news {
 }
