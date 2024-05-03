@@ -12,8 +12,14 @@ a {
   color: #000000;
 }
 body {
-  font-family: "Kakao", "Inter", "Noto Sans KR", sans-serif;
+  font-family: "Kakao1", "Inter", "Noto Sans KR", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  color: rgb(32, 32, 32);
+  overflow-wrap: break-word;
+}
+
+.br-12 {
+  border-radius: 12px;
 }
