@@ -19,6 +19,9 @@ body {
   color: rgb(32, 32, 32);
   overflow-wrap: break-word;
 }
+.wrap {
+  padding-top: 70px;
+}
 
 .br-12 {
   border-radius: 12px;
