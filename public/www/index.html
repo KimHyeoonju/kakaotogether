@@ -78,8 +78,8 @@
           <!-- main 왼쪽 영역 - start (담당자 : 김현주) -->
           <section class="main-left">
             <div class="main-left-div">
-              <!-- 유사한 형태(1) : last-donation -->
-              <div class="last-donation cnt-money br-12">
+              <!-- (Start) 유사한 형태(1) : last-donation -->
+              <div class="left-div-style last-donation cnt-money br-12">
                 <h4 class="last-donation-comment">
                   마지막 기부자를 찾습니다 👀
                 </h4>
@@ -89,7 +89,7 @@
                 <div class="cnt-donation-content">
                   <div class="cnt-donation-left br-12">
                     <div class="cnt-donation-money"></div>
-                    <div class="cnt-donation-img"></div>
+                    <div class="cnt-money-img"></div>
                   </div>
                   <div class="cnt-donation-right">
                     <div class="cnt-donation-sub-title">
@@ -110,35 +110,261 @@
                         </div>
                       </div>
                       <div class="last-donation-btn">
-                        <button type="button" class="button1">하트 응원</button>
-                        <button type="button" class="button1">기부하기</button>
+                        <button type="button">
+                          <i
+                            src="./images/footer_facebook_gray80.svg"
+                            style="width: 10px; height: 10px"
+                          ></i>
+                          <span>하트 응원</span>
+                          <!-- 말풍선 (추후 수정) -->
+                          <!-- <span></span> -->
+                        </button>
+                        <button type="button">기부하기</button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- 유사한 형태(2) : donation-list-div -->
-              <div class="donation-list-div"></div>
-              <!-- 유사한 형태(1) : last-donation-->
-              <div class="last-donation cnt-time"></div>
-              <!-- 유사한 형태(2) : donation-list-div -->
-              <div class="donation-list-div"></div>
-              <!-- Swiper -->
-              <div class="main-left-slide">
-                <div class="swiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="" alt="" />
+              <!-- (End) last-donation -->
+
+              <!-- (Start) 유사한 형태(2) : donation-list-div -->
+              <div class="left-div-style donation-list-div br-12">
+                <h4 class="donation-list-comment">
+                  ️가장 많이 기부 중인 모금함
+                </h4>
+                <p class="donation-list-text">
+                  오늘, 기부 하셨나요? 당신의 마음도 함께 나눠주세요!
+                </p>
+                <div class="many-donation-list">
+                  <!-- 아래 div는 추후 js로 반복 처리 예정 -->
+                  <div class="many-donation">
+                    <div class="many-money-img br-12"></div>
+                    <div class="donation-list-item">
+                      <strong class="donation-list-sub-title"
+                        >생리대 걱정 없이 학교에 다니고 싶어요...</strong
+                      >
+                      <span class="center-name">전주장애인종합복지관</span>
+                      <div class="last-donation-goal">
+                        <div class="bar-chart">
+                          <!-- 막대 그래프 (추후 수정) -->
+                        </div>
+                        <!-- 추후 수정 -->
+                        <div class="progress-info">
+                          <div>
+                            <span>5,000,000원</span>
+                            <span>41%</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="swiper-slide">
-                      <img src="" alt="" />
+                  </div>
+
+                  <div class="many-donation">
+                    <div class="many-money-img br-12"></div>
+                    <div class="donation-list-item">
+                      <strong class="donation-list-sub-title"
+                        >생리대 걱정 없이 학교에 다니고 싶어요...</strong
+                      >
+                      <span class="center-name">전주장애인종합복지관</span>
+                      <div class="last-donation-goal">
+                        <div class="bar-chart">
+                          <!-- 막대 그래프 (추후 수정) -->
+                        </div>
+                        <!-- 추후 수정 -->
+                        <div class="progress-info">
+                          <div>
+                            <span>5,000,000원</span>
+                            <span>41%</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="swiper-slide">
-                      <img src="" alt="" />
+                  </div>
+
+                  <div class="many-donation">
+                    <div class="many-money-img br-12"></div>
+                    <div class="donation-list-item">
+                      <strong class="donation-list-sub-title"
+                        >생리대 걱정 없이 학교에 다니고 싶어요...</strong
+                      >
+                      <span class="center-name">전주장애인종합복지관</span>
+                      <div class="last-donation-goal">
+                        <div class="bar-chart">
+                          <!-- 막대 그래프 (추후 수정) -->
+                        </div>
+                        <!-- 추후 수정 -->
+                        <div class="progress-info">
+                          <div>
+                            <span>5,000,000원</span>
+                            <span>41%</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <!-- (End) donation-list-div -->
+
+              <!-- (Start) 유사한 형태(1) : last-donation-->
+              <div class="left-div-style last-donation cnt-time">
+                <h4 class="last-donation-comment">
+                  ️시간이 얼마 남지 않았어요!
+                </h4>
+                <p class="last-donation-text">
+                  망설이면 끝! 조금만 더 힘을 보태주세요.
+                </p>
+                <div class="cnt-donation-content">
+                  <div class="cnt-donation-left br-12">
+                    <div class="cnt-donation-money"></div>
+                    <div class="cnt-time-img"></div>
+                  </div>
+                  <div class="cnt-donation-right">
+                    <div class="cnt-donation-sub-title">
+                      <strong> 제가 웃으면 엄마는 안 아프다고 하세요 </strong>
+                      <div class="last-donation-goal">
+                        <div class="bar-chart">
+                          <!-- 막대 그래프 (추후 수정) -->
+                        </div>
+                        <!-- 추후 수정 -->
+                        <div class="progress-info">
+                          <div>
+                            <span>5,000,000원</span>
+                            <span>6,000,000원 목표</span>
+                          </div>
+                          <div>날짜 입력</div>
+                        </div>
+                      </div>
+                      <div class="last-donation-btn">
+                        <button type="button">
+                          <i
+                            src="./images/footer_facebook_gray80.svg"
+                            style="width: 10px; height: 10px"
+                          ></i>
+                          <span>하트 응원</span>
+                          <!-- 말풍선 (추후 수정) -->
+                          <!-- <span></span> -->
+                        </button>
+                        <button type="button">기부하기</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- (End) last-donation -->
+
+              <!-- (Start) 유사한 형태(2) : donation-list-div -->
+              <div class="left-div-style donation-list-div br-12">
+                <h4 class="donation-list-comment">️태그로 보는 모금함</h4>
+                <!-- 추후 버튼 클릭시 내용 변경 처리 -->
+                <div class="donation-list-tags">
+                  <button id="basic">#주거개선</button>
+                  <button>#어려운이유</button>
+                  <button>#건강한식생활</button>
+                  <button>#행복한노후</button>
+                </div>
+                <div class="many-donation-list">
+                  <!-- 아래 div는 추후 js로 반복 처리 예정 -->
+                  <div class="many-donation">
+                    <div class="many-money-img br-12"></div>
+                    <div class="donation-list-item">
+                      <strong class="donation-list-sub-title"
+                        >생리대 걱정 없이 학교에 다니고 싶어요...</strong
+                      >
+                      <span class="center-name">전주장애인종합복지관</span>
+                      <div class="last-donation-goal">
+                        <div class="bar-chart">
+                          <!-- 막대 그래프 (추후 수정) -->
+                        </div>
+                        <!-- 추후 수정 -->
+                        <div class="progress-info">
+                          <div>
+                            <span>5,000,000원</span>
+                            <span>41%</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="many-donation">
+                    <div class="many-money-img br-12"></div>
+                    <div class="donation-list-item">
+                      <strong class="donation-list-sub-title"
+                        >생리대 걱정 없이 학교에 다니고 싶어요...</strong
+                      >
+                      <span class="center-name">전주장애인종합복지관</span>
+                      <div class="last-donation-goal">
+                        <div class="bar-chart">
+                          <!-- 막대 그래프 (추후 수정) -->
+                        </div>
+                        <!-- 추후 수정 -->
+                        <div class="progress-info">
+                          <div>
+                            <span>5,000,000원</span>
+                            <span>41%</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="many-donation">
+                    <div class="many-money-img br-12"></div>
+                    <div class="donation-list-item">
+                      <strong class="donation-list-sub-title"
+                        >생리대 걱정 없이 학교에 다니고 싶어요...</strong
+                      >
+                      <span class="center-name">전주장애인종합복지관</span>
+                      <div class="last-donation-goal">
+                        <div class="bar-chart">
+                          <!-- 막대 그래프 (추후 수정) -->
+                        </div>
+                        <!-- 추후 수정 -->
+                        <div class="progress-info">
+                          <div>
+                            <span>5,000,000원</span>
+                            <span>41%</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- (End) donation-list-div -->
+
+              <!-- 슬라이드 -->
+
+              <div class="main-left-slide">
+                <!-- Start 상단 슬라이드 -->
+                <div class="swiper topslide">
+                  <div class="swiper-wrapper">
+                    <!-- 외부 데이터 연동 -->
+                    <!-- <div class="swiper-slide">
+                      <a href="#">
+                        <p class="slide-title">
+                          카카오브레인의<br />
+                          연구문화
+                        </p>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#">
+                        <p class="slide-title">
+                          카카오브레인의<br />
+                          연구문화
+                        </p>
+                      </a>
+                    </div> -->
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+                <!-- End 상단 슬라이드 -->
+              </div>
+
+              <!-- Swiper -->
+
               <!-- 리스트 -->
               <div class="main-donation-list"></div>
             </div>

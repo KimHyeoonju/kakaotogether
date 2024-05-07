@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "pic": "kakao_swiper_1.jpg",
+    "url": "#",
+    "card_title": "카카오톡 그린 사용 설명서",
+    "card_subtext": "카카오 그린 사용 설명서를 실천하고 건강한 디지털 습관을 가져볼까요?",
+    "tag_name": "모두의행동",
+    "count": 5304
+  },
+  {
+    "id": 2,
+    "pic": "kakao_swiper_2.jpg",
+    "url": "#",
+    "card_title": "카카오톡 그린 사용 설명서",
+    "card_subtext": "카카오 그린 사용 설명서를 실천하고 건강한 디지털 습관을 가져볼까요?",
+    "tag_name": "모두의행동",
+    "count": 5304
+  },
+  {
+    "id": 3,
+    "pic": "kakao_swiper_3.jpg",
+    "url": "#",
+    "card_title": "카카오톡 그린 사용 설명서",
+    "card_subtext": "카카오 그린 사용 설명서를 실천하고 건강한 디지털 습관을 가져볼까요?",
+    "tag_name": "모두의행동",
+    "count": 5304
+  }
+]
