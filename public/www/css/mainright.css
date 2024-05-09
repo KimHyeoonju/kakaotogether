@@ -5,6 +5,7 @@
 .main-right-div {
 }
 .main-right-slide {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 10px 0px;
 }
 /* ------------------------------------------------- */
 .mr-slide-donation {
@@ -12,7 +13,6 @@
   background-color: #ffe800;
   /* 패딩 수정필요 */
   padding: 34px 26px 29px 26px;
-
   border-radius: 12px 12px 0px 0px;
 }
 .mr-slide-donation-link {
@@ -129,6 +129,46 @@
 }
 /* ------------------------------------------------- */
 .main-right-score {
+  margin-top: 30px;
+  padding: 30px 26px;
+  background-color: aquamarine;
+}
+.mr-score-title {
+}
+.mr-score-title-txt {
+  display: block;
+  color: rgb(32, 32, 32);
+  font-size: 20px;
+}
+.main-right-score ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.mr-score-list li {
+  height: 60px;
+}
+.mr-score-list a {
+  display: flex;
+  height: 100%;
+}
+.mr-score-list-img {
+  width: 60px;
+  background-color: #fff;
+}
+.mr-score-list-q {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 16px;
+  justify-content: center;
+}
+.mr-score-list-q strong {
+  line-height: 1.73;
+  font-size: 15px;
+}
+.mr-score-list-q span {
+  line-height: 1.48;
+  font-size: 13px;
 }
 /* ------------------------------------------------- */
 .main-right-news {
