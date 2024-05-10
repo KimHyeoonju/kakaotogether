@@ -18,9 +18,11 @@ body {
   font-style: normal;
   color: rgb(32, 32, 32);
   overflow-wrap: break-word;
+  background-color: rgb(247, 247, 247);
 }
 .wrap {
   padding-top: 70px;
+  margin: 0 10px;
 }
 
 .br-12 {

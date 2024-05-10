@@ -1,3 +1,20 @@
+/* progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: white;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background: linear-gradient(to top right, blue, lightgrey);
+  border-radius: 10px;
+} */
+
 .main-left {
   width: 700px;
   height: 100%;
@@ -45,8 +62,6 @@
 }
 
 .cnt-donation-left {
-  /* height: auto;
-  width: auto; */
 }
 
 .cnt-donation-money {
@@ -94,7 +109,6 @@
   height: 64px;
   margin-top: 0px;
   padding-top: 12px;
-  /* background-color: #eeeeee; */
 }
 
 .progress-info {
@@ -153,14 +167,11 @@
 }
 
 .donation-list-div {
-  /* position: relative; */
 }
 
 .many-donation-list {
   width: 100%;
-
   display: flex;
-
   display: flex;
   align-items: stretch;
   justify-content: space-between;
@@ -171,7 +182,6 @@
 .many-donation {
   width: 200px;
   height: auto;
-  /* border: 1px solid rgba(0, 0, 0, 0.3); */
   border-radius: inherit;
 }
 
@@ -192,8 +202,9 @@
 
 .donation-list-item {
 }
-/* .donation-list-sub-title {
-} */
+
+.donation-list-sub-title {
+}
 
 .center-name {
 }
@@ -209,7 +220,6 @@
 
 .donation-list-tags button {
   height: 37px;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -234,25 +244,18 @@
   color: rgb(255, 255, 255);
 }
 
-/* 이놈 */
 .main-left-slide {
   position: relative;
   width: 100%;
   height: auto;
   height: 100%;
   display: flex;
-  /* flex-flow: column wrap; */
   align-items: center;
   outline: none;
-
   overflow: hidden;
   cursor: pointer;
+  margin-bottom: 30px;
 }
-
-/* 페이지수 */
-/* 
-.left-slide-pagecnt {
-} */
 
 .swiper-wrapper {
   width: 900%;
@@ -274,7 +277,7 @@
   cursor: pointer;
 }
 
-.left-swiper-img {
+.left-card-img {
   width: 250px;
   height: 250px;
   border-radius: 12px 0px 0px 12px;
@@ -292,36 +295,34 @@
 
 .swiper-tag {
   display: flex;
+  justify-content: flex-start;
   padding: 0px;
   border: 0px;
   background-color: transparent;
   font-size: 13px;
   letter-spacing: -0.15px;
   order: 1;
-  justify-content: flex-start;
 }
 
 .swiper-tag > span {
-  color: rgb(136, 136, 136);
   font-size: 12px;
   font-style: normal;
-  overflow-wrap: break-word;
+  color: rgb(136, 136, 136);
   letter-spacing: -0.1px;
+  overflow-wrap: break-word;
   opacity: 0.7;
 }
 
 .left-swiper-info > strong {
   padding-top: 4px;
   font-size: 20px;
+  line-height: 1.56;
   color: rgb(255, 255, 255);
   white-space: pre-wrap;
   order: 2;
-  line-height: 1.56;
 }
 
 .left-swiper-info > span {
-  /* max-height: 46px; */
-
   margin-top: 4px;
   padding-top: 11px;
   overflow: hidden;
@@ -333,14 +334,12 @@
 }
 
 .progress-count {
+  position: relative;
   width: fit-content;
-  /* width: auto; */
   height: 30px;
   display: flex;
-  flex-wrap: nowrap;
-
   align-items: center;
-
+  flex-wrap: nowrap;
   margin-top: 15px;
   padding: 0px 12px;
   border: 1px solid rgba(187, 107, 255, 0.5);
@@ -352,10 +351,63 @@
   order: 4;
 }
 
+.swiper-count {
+  position: absolute;
+  bottom: 0;
+  width: 700px;
+  height: 250px;
+}
+
+.swiper-control-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-control-bottomright {
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+  width: 40px;
+  height: 20px;
+  margin: 30px;
+  color: rgb(255, 255, 255);
+}
+
+/* swiper 숫자 스타일 */
+.swiper-pagination {
+  width: 40px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* swiper 자동 부여 bttom:8px 삭제  */
+  margin-bottom: -8px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 10px;
+  border-radius: 999px;
+}
+
+/* svg */
 .material-symbols-outlined {
-  display: inline-block;
   margin-right: 5px;
-  /* font-variation-settings: "FILL" 1, "wght" 300, "GRAD" 0, "opsz" 13;
-  width: 13px;
-  height: 13px; */
+}
+
+.main-donation-list {
+}
+
+.main-donation-list > .left-div-style {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.main-donation-list .left-card-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 12px 0px 0px 12px;
+  background: url("../images/donation_img_07.jpg") no-repeat center;
 }

@@ -11,12 +11,15 @@ window.addEventListener("load", function () {
 
       for (let i = 0; i < result.length; i++) {
         const data = result[i];
+        const cunt = data.count
+          .toString()
+          .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
 
         const test = `
                       <div class="swiper-slide">
                         <a href="${data.url}">
                           <div class="left-swiper-contents br-12">
-                            <div class="left-swiper-img" style="background:url('./images/${data.pic}') no-repeat center; background-size: cover;">
+                            <div class="left-card-img" style="background:url('./images/${data.pic}') no-repeat center; background-size: cover;">
                             </div>
                             
                             <div class="left-swiper-info">
@@ -28,10 +31,8 @@ window.addEventListener("load", function () {
                               </button>
                               <em class="progress-count">
                               
-                              <svg xmlns="http://www.w3.org/2000/svg" class="material-symbols-outlined" height="16px" viewBox="0 -960 960 960" width="16px" fill="#ad4cfe">
-                              <path d="m355.46-97.39-70.38-116.3-132.54-29.7 12.23-135.53L74.93-480l89.84-101.08-12.23-135.53 132.54-29.7 70.38-116.3L480-809.46l124.54-53.15 70.38 116.3 132.54 29.7-12.23 135.53L885.07-480l-89.84 101.08 12.23 135.53-132.54 29.7-70.38 116.3L480-150.54 355.46-97.39ZM429-349.85 653.15-573 616-609.38l-187 186-85-84.77L306.85-471 429-349.85Z"/>
-                              </svg>
-                                ${data.count} 명 행동중
+                              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28 28" width="14" height="14" opacity="1" class="sc-62ee9b1b-0 gsIhNz material-symbols-outlined";><g fill="none" fill-rule="evenodd"><path d="m15.414.566 2.934 2.933L22.5 3.5a2 2 0 0 1 2 2v4.15l2.934 2.936a2 2 0 0 1 0 2.828L24.5 18.35 24.5 22.5a2 2 0 0 1-2 2h-4.15l-2.936 2.934a2 2 0 0 1-2.828 0L9.65 24.5 5.5 24.5a2 2 0 0 1-2-2v-4.152L.565 15.414a2 2 0 0 1 0-2.828L3.499 9.65 3.5 5.5a2 2 0 0 1 2-2h4.151L12.586.565a2 2 0 0 1 2.828 0z" fill="#ad4cfe"></path><path d="M18.02 9.62a1 1 0 0 1 1.677 1.082l-.068.106-6.066 8.21a1 1 0 0 1-1.443.175l-.09-.085-3.506-3.73a1 1 0 0 1 1.366-1.456l.091.086 2.685 2.857 5.354-7.246z" fill="#fff" fill-rule="nonzero"></path></g></svg>
+                                ${cunt} 명 행동중
                               </em>
                             </div>
                           </div>

@@ -98,8 +98,16 @@
                         자립준비청년 우현이, 사회 첫걸음에 날개를 달아주세요!
                       </strong>
                       <div class="last-donation-goal">
+
+
+                        <!-- <progress value="0.7" ></progress> -->
+                        <!-- <p>진행률 : <progress max=100 value="25">25%</progress></p> -->
+
+
+
                         <div class="bar-chart">
                           <!-- 막대 그래프 (추후 수정) -->
+                          
                         </div>
                         <!-- 추후 수정 -->
                         <div class="progress-info">
@@ -208,7 +216,7 @@
               <!-- (End) donation-list-div -->
 
               <!-- (Start) 유사한 형태(1) : last-donation-->
-              <div class="left-div-style last-donation cnt-time">
+              <div class="left-div-style last-donation cnt-time br-12">
                 <h4 class="last-donation-comment">
                   ️시간이 얼마 남지 않았어요!
                 </h4>
@@ -335,15 +343,11 @@
               </div>
               <!-- (End) donation-list-div -->
 
-              <!-- 슬라이드 -->
-
+              <!-- Swiper -->
               <div class="main-left-slide br-12">
-                <!-- <div class="left-slide-pagecnt">페이지수</div> -->
                 <!-- Start 상단 슬라이드 -->
                   <div class="swiper left-swiper">  
                     <div class="swiper-wrapper left-swiper-wrapper">
-
-                      
                     <!-- 외부 데이터 연동 -->
                     <!-- 
                         <div class="swiper-slide">
@@ -367,17 +371,45 @@
                             </div>
                           </a>
                     </div> -->
-
                   </div>
-                  <div class="swiper-pagination"></div>
+                  <div class="swiper-count">
+                    <div class="swiper-control-box">
+                      <div class="swiper-control-bottomright">
+                        <div class="swiper-pagination"></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <!-- End 상단 슬라이드 -->
               </div>
-
               <!-- Swiper -->
 
               <!-- 리스트 -->
-              <div class="main-donation-list"></div>
+              <!-- 수정중 -->
+              <!-- 추후 main-donation-list는 반복처리를 통해서 처리할 예정 -->
+              <div class="main-donation-list br-12">
+                <div class="left-div-style br-12">
+                  <a href="#">
+                    <div class="left-swiper-contents">
+                      <div class="left-card-img"></div>
+                      <div class="left-swiper-info">
+                        <strong>수정중</strong>
+                        <span>...</span>
+                        <button type="button">
+                          <span>#</span>
+                          <span>모두의행동</span>
+                        </button>
+                        <em class="">
+                          <i
+                          src="./images/footer_facebook_gray80.svg"
+                          style="width: 10px; height: 10px"></i>
+                        5,327 명 행동중
+                        </em>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
           </section>
           <!-- main 왼쪽 영역 - end -->
@@ -485,18 +517,58 @@
       <!-- 하단 레이아웃 -->
       <footer class="footer">
         <div class="footer-inner">
-          <div class="footer-logo"></div>
-          <!-- 사이트 문구 -->
-          <div class="footer-info"></div>
-          <div class="footer-sns">
+          <a href="/" class="footer-logo">
+            <span class="item-display-n">카카오같이가치</span>
+          </a>
+          <p>
+            카카오같이가치는 카카오와 카카오임팩트가 함께합니다.
+          </p>
+          <div class="footer-info">
             <!-- 사이트맵 -->
-            <div class="footer-left">
-              <ul class="footer-menu-list"></ul>
-            </div>
+            <ul class="footer-menu-list">
+              <li class="footer-li-style">
+                <a href="#"><span>© Kakao Corp.</span></a>
+              </li>
+              <li class="footer-li-style">
+                <a href="#"><span>고객센터</span></a>
+              </li>
+              <li class="footer-li-style">
+                <a href="#"><span>문의하기</span></a>
+              </li>
+              <li class="footer-li-style">
+                <a href="#"><span>이용약관</span></a>
+              </li>
+              <li class="footer-li-style">
+                <a href="#"><span>개인정보처리방침</span></a>
+              </li>
+            </ul>
             <!-- SNS 목록 -->
-            <div class="footer-right">
-              <ul class="footer-icon-list"></ul>
-            </div>
+            <ul class="footer-sns-list">
+              <li class="footer-li-style">
+                <a href="#">
+                  <span class="footer-sns-link">
+                    <i style="background: url(./images/footer_kakaotalk_gray80.svg) no-repeat center;"></i>
+                    <span class="item-display-n">카카오톡</span>
+                  </span>
+                </a>
+              </li>
+              <li class="footer-li-style">
+                <a href="#">
+                  <span class="footer-span-style footer-sns-link">
+                    <i style="background: url(./images/footer_facebook_gray80.svg) no-repeat center;"></i>
+                    <span class="item-display-n">페이스북</span>
+                  </span>
+                </a>
+              </li>
+              <li class="footer-li-style">
+                <a href="#">
+                  <span class="footer-span-style footer-sns-link">
+                    <i style="background: url(./images/footer_instagram_gray80.svg) no-repeat center;"></i>
+                    <span class="item-display-n">인스타그램</span>
+                  </span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </footer>
