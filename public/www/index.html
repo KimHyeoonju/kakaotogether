@@ -125,8 +125,13 @@
                             style="width: 10px; height: 10px"
                           ></i>
                           <span>하트 응원</span>
-                          <!-- 말풍선 (추후 수정) -->
-                          <!-- <span></span> -->
+                          <!-- 말풍선 : 추후 수정 -->
+                          <span class="cheering-ani">
+                            <span class="cheering-text-style">
+                              <em>카카오가 대신 100원</em>
+                              기부!
+                            </span>
+                          </span>
                         </button>
                         <button type="button">기부하기</button>
                       </div>
@@ -251,8 +256,13 @@
                             style="width: 10px; height: 10px"
                           ></i>
                           <span>하트 응원</span>
-                          <!-- 말풍선 (추후 수정) -->
-                          <!-- <span></span> -->
+                          <!-- 말풍선 : 추후 수정 -->
+                          <span class="cheering-ani">
+                            <span class="cheering-text-style">
+                              <em>카카오가 대신 100원</em>
+                              기부!
+                            </span>
+                          </span>
                         </button>
                         <button type="button">기부하기</button>
                       </div>
@@ -387,28 +397,37 @@
               <!-- 리스트 -->
               <!-- 수정중 -->
               <!-- 추후 main-donation-list는 반복처리를 통해서 처리할 예정 -->
-              <div class="main-donation-list br-12">
-                <div class="left-div-style br-12">
+              
+              <div class="main-donation-list br-12 content-card">
+                <!-- <div class="left-div-style br-12">
                   <a href="#">
-                    <div class="left-swiper-contents">
-                      <div class="left-card-img"></div>
-                      <div class="left-swiper-info">
-                        <strong>수정중</strong>
-                        <span>...</span>
-                        <button type="button">
+                    <div class="left-card-contents">
+                      <div class="card-contents-img"></div>
+                      <div class="card-contents-info">
+                        <strong>살아남기 위하여 고향을 떠나는 아이티 주민들</strong>
+                        <span>대지진 이후 이어진 재해, 그리고 폭력사태와 마주한 아이들 아이티는 21년 발생한 대지진 이후 연달아 찾아온 자연 재난과 전염병으로 어려움을 겪고 있습니다. 이런 상황에 무장 조직의 등장으로 곳곳에서 폭력 상황이 발생하고 있는데요. 작년에 무장 조직으로 인하여 발생한 희생자만 5,000명 이상입니다. 총격과 납치, 학대 등 수많은 폭력 상황의 중심에 아이들이 있습니다.
+                          특별히 젠더기반 폭력이 증가하고 있습니다. 아이들은 모든 형태의 위험으로부터 벗어나 존엄하게 대우받고 보호받을 수 있도록 월드비전은 계속해서 목소리를 내고 행동할 예정입니다.</span>
+                        <div class="progress-container">
+                          <div class="progress-bar">
+                            <div class="current-progress-bar"></div>
+                          </div>
+                          <div class="progress-info">
+                            <div>
+                              <span class="text-num-style progress-info-money">100,000원</span>
+                            </div>
+                            <div>
+                              <span class="text-num-style progress-info-percent">20%</span>
+                            </div>
+                          </div>
+                        </div>
+                        <button type="button" class="card-tag">
                           <span>#</span>
-                          <span>모두의행동</span>
+                          <span>긴급구호</span>
                         </button>
-                        <em class="">
-                          <i
-                          src="./images/footer_facebook_gray80.svg"
-                          style="width: 10px; height: 10px"></i>
-                        5,327 명 행동중
-                        </em>
                       </div>
                     </div>
                   </a>
-                </div>
+                </div> -->
               </div>
             </div>
           </section>
@@ -553,7 +572,8 @@
         </div>
         <!-- main-inner - end -->
       </main>
-      <!-- 하단 레이아웃 -->
+
+      <!-- 하단 레이아웃 - (담당자 : 김현주) -->
       <footer class="footer">
         <div class="footer-inner">
           <a href="/" class="footer-logo">
@@ -565,43 +585,47 @@
           <div class="footer-info">
             <!-- 사이트맵 -->
             <ul class="footer-menu-list">
-              <li class="footer-li-style">
-                <a href="#"><span>© Kakao Corp.</span></a>
+              <li class="division-point">
+                <a href="#">
+                  <span class="footer-info-style">© Kakao Corp.
+                  <!-- <span class="footer-dot">&#183;</span> -->
+                </span>
+                </a>
               </li>
-              <li class="footer-li-style">
-                <a href="#"><span>고객센터</span></a>
+              <li class="division-point">
+                <a href="#"><span class="footer-info-style">고객센터</span></a>
               </li>
-              <li class="footer-li-style">
-                <a href="#"><span>문의하기</span></a>
+              <li class="division-point">
+                <a href="#"><span class="footer-info-style">문의하기</span></a>
               </li>
-              <li class="footer-li-style">
-                <a href="#"><span>이용약관</span></a>
+              <li class="division-point">
+                <a href="#"><span class="footer-info-style">이용약관</span></a>
               </li>
-              <li class="footer-li-style">
-                <a href="#"><span>개인정보처리방침</span></a>
+              <li class="">
+                <a href="#"><span class="footer-info-style privacy-policy">개인정보처리방침</span></a>
               </li>
             </ul>
             <!-- SNS 목록 -->
             <ul class="footer-sns-list">
-              <li class="footer-li-style">
+              <li>
                 <a href="#">
-                  <span class="footer-sns-link">
+                  <span class="footer-info-style footer-sns-link">
                     <i style="background: url(./images/footer_kakaotalk_gray80.svg) no-repeat center;"></i>
                     <span class="item-display-n">카카오톡</span>
                   </span>
                 </a>
               </li>
-              <li class="footer-li-style">
+              <li>
                 <a href="#">
-                  <span class="footer-span-style footer-sns-link">
+                  <span class="footer-info-style footer-sns-link">
                     <i style="background: url(./images/footer_facebook_gray80.svg) no-repeat center;"></i>
                     <span class="item-display-n">페이스북</span>
                   </span>
                 </a>
               </li>
-              <li class="footer-li-style">
+              <li>
                 <a href="#">
-                  <span class="footer-span-style footer-sns-link">
+                  <span class="footer-info-style footer-sns-link">
                     <i style="background: url(./images/footer_instagram_gray80.svg) no-repeat center;"></i>
                     <span class="item-display-n">인스타그램</span>
                   </span>

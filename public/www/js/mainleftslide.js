@@ -1,5 +1,5 @@
 window.addEventListener("load", function () {
-  const dataUrl = "./apis/cards.json";
+  const dataUrl = "./apis/slides.json";
 
   fetch(dataUrl)
     .then((response) => {

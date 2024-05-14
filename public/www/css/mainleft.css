@@ -24,6 +24,7 @@ progress::-webkit-progress-value {
 }
 
 .left-div-style {
+  min-height: 300px;
   margin-bottom: 30px;
   padding: 24px 30px 32px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 10px 0px;
@@ -81,9 +82,7 @@ progress::-webkit-progress-value {
 
 .cnt-donation-right {
   width: 100%;
-
   height: 100%;
-
   padding: 0 0 0 25px;
 }
 
@@ -152,6 +151,73 @@ progress::-webkit-progress-value {
   content: url("footer_facebook_gray80.svg");
   width: 10px;
   height: 10px;
+}
+
+/* 말풍선 */
+.cheering-ani {
+  display: inline-flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  bottom: -27px;
+  height: 28px;
+  padding: 0px 10px;
+  border-radius: 6px;
+  background-color: rgb(32, 32, 32);
+  transform: translateX(-50%);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  font-size: 11px;
+
+  animation-name: cheering;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+@keyframes cheering {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+  8.33%,
+  91.67% {
+    opacity: 1;
+  }
+}
+
+/* 말풍선 꼬리 */
+.cheering-ani::before {
+  display: block;
+  position: absolute;
+  left: 39px;
+  top: -6px;
+  width: 9px;
+  height: 6px;
+  background: url("../images/arrow_bubble_black.png") 50% 0px;
+  content: "";
+}
+
+.cheering-text-style {
+  color: rgb(255, 255, 255);
+  font-style: normal;
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.1;
+  letter-spacing: -0.8px;
+}
+
+.cheering-text-style > em {
+  padding: 0px 4px;
+  font-weight: 700;
 }
 
 .cnt-time-img {
@@ -251,10 +317,10 @@ progress::-webkit-progress-value {
   height: 100%;
   display: flex;
   align-items: center;
+  margin-bottom: 30px;
   outline: none;
   overflow: hidden;
   cursor: pointer;
-  margin-bottom: 30px;
 }
 
 .swiper-wrapper {
@@ -283,7 +349,8 @@ progress::-webkit-progress-value {
   border-radius: 12px 0px 0px 12px;
 }
 
-.left-swiper-info {
+.left-swiper-info,
+.card-contents-info {
   position: relative;
   right: 0;
   width: 450px;
@@ -313,7 +380,8 @@ progress::-webkit-progress-value {
   opacity: 0.7;
 }
 
-.left-swiper-info > strong {
+.left-swiper-info > strong,
+.card-contents-info > strong {
   padding-top: 4px;
   font-size: 20px;
   line-height: 1.56;
@@ -322,7 +390,8 @@ progress::-webkit-progress-value {
   order: 2;
 }
 
-.left-swiper-info > span {
+.left-swiper-info > span,
+.card-contents-info > span {
   margin-top: 4px;
   padding-top: 11px;
   overflow: hidden;
@@ -399,15 +468,142 @@ progress::-webkit-progress-value {
 .main-donation-list {
 }
 
-.main-donation-list > .left-div-style {
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
+.contents-card-style {
+  min-height: 250px;
+  margin-bottom: 30px !important;
 }
 
-.main-donation-list .left-card-img {
+.main-donation-list > .left-div-style {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.card-contents-img {
   width: 250px;
   height: 250px;
+  /* background: url("../images/donation_img_07.jpg") no-repeat center; */
   border-radius: 12px 0px 0px 12px;
-  background: url("../images/donation_img_07.jpg") no-repeat center;
+}
+
+/* .left-div-style 합치기 */
+/* padding 분리해서 다시 전체 스타일 변경하기 */
+.content-card {
+  margin-bottom: 30px;
+  /* padding: 24px 30px 32px; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 10px 0px !important;
+  background-color: rgb(255, 255, 255);
+}
+
+/* left-card-contents { */
+.left-card-contents {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  /* background-color: rgb(0, 0, 0); */
+  cursor: pointer;
+}
+
+/* .card-contents-info {
+  height: 200px;
+} */
+
+.card-contents-info > strong {
+  padding-top: 3px;
+  color: rgb(32, 32, 32);
+  font-style: normal;
+  font-weight: 600;
+
+  /* overflow: hidden; */
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow-wrap: break-word;
+  word-break: keep-all;
+
+  letter-spacing: -0.1px;
+  line-height: 1.56;
+}
+
+.card-contents-info > span {
+  display: -webkit-box;
+  margin: 11px 0px 0px;
+  width: 390px;
+  /* height: 100%; */
+  padding: 0px;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.card-sub-style {
+  -webkit-line-clamp: 2 !important;
+}
+
+.progress-container {
+  order: 4;
+  padding-top: 16px;
+}
+
+.progress-bar {
+  height: 4px;
+  display: flex;
+  border-radius: 999px;
+  background-color: rgb(233, 233, 233);
+  width: 100%;
+}
+
+.current-progress-bar {
+  height: 100%;
+  border-radius: inherit;
+  background-color: rgb(255, 64, 80);
+  /* width: 76%; */
+}
+
+.progress-info {
+  padding-top: 6px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+
+.text-num-style {
+  font-size: 14px;
+  line-height: 1.57;
+
+  font-style: normal;
+  letter-spacing: -0.1px;
+  font-weight: 700;
+}
+
+.progress-info-money {
+  color: rgb(32, 32, 32);
+}
+
+.progress-info-percent {
+  color: rgb(255, 64, 80);
+}
+
+.card-tag {
+  order: 1;
+  padding: 10px 0px 0px;
+  background-color: transparent;
+  border: 0px;
+  width: fit-content;
+}
+
+.card-tag > span {
+  color: rgb(153, 153, 153);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: -0.15px;
+  overflow-wrap: break-word;
+  line-height: 1.67;
+  opacity: 0.7;
+}
+
+.card-tag > span:first-child {
+  padding-right: 2px;
 }
