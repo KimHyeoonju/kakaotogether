@@ -21,20 +21,20 @@ window.addEventListener("load", function () {
                 <div class="left-card-contents">
                     <div class="card-contents-img" style="background:url('./images/${data.pic}') no-repeat center; background-size: cover;"></div>
                     <div class="card-contents-info">
-                    <strong class="card-info-strong">${data.card_title}</strong>
-                    <span class="card-info-span">${data.card_subtext}</span>
-                    <div class="progress-container">
+                      <strong class="left-df-title-font card-info-strong">${data.card_title}</strong>
+                      <span class="df-subtext-font card-info-span">${data.card_subtext}</span>
+                      <div class="progress-container">
                         <div class="progress-bar">
-                        <div class="current-progress-bar" style="width: ${data.card_percent};"></div>
+                          <div class="current-progress-bar" style="width: ${data.card_percent};"></div>
                         </div>
                         <div class="progress-info">
+                          <div>
+                            <span class="progress-info-money card-progress-text-style">${money}원</span>
+                          </div>
                         <div>
-                            <span class="text-num-style progress-info-money">${money}원</span>
+                          <span class="progress-info-percent card-progress-text-style">${data.card_percent}</span>
                         </div>
-                        <div>
-                            <span class="text-num-style progress-info-percent">${data.card_percent}</span>
-                        </div>
-                        </div>
+                      </div>
                     </div>
                     <button type="button" class="card-tag">
                         <span>#</span>

@@ -79,74 +79,129 @@
           <!-- main 왼쪽 영역 - start (담당자 : 김현주) -->
           <section class="main-left">
             <div class="main-left-div">
-              <!-- (Start) 유사한 형태(1) : last-donation -->
               <div class="left-div-style last-donation cnt-money br-12">
-                <h4 class="last-donation-comment">
+                <h4 class="left-title-font-lh14">
                   마지막 기부자를 찾습니다 👀
                 </h4>
-                <p class="last-donation-text">
+                <p class="left-subtext-font-lh16">
                   목표 달성까지 얼마 남지 않았어요!
                 </p>
-                <div class="cnt-donation-content">
-                  <div class="cnt-donation-left br-12">
-                    <div class="cnt-donation-money"></div>
-                    <div class="cnt-money-img"></div>
-                  </div>
-                  <div class="cnt-donation-right">
-                    <div class="cnt-donation-sub-title">
-                      <strong>
-                        자립준비청년 우현이, 사회 첫걸음에 날개를 달아주세요!
-                      </strong>
-                      <div class="last-donation-goal">
-
-
-                        <!-- <progress value="0.7" ></progress> -->
-                        <!-- <p>진행률 : <progress max=100 value="25">25%</progress></p> -->
-
-
-
-                        <div class="bar-chart">
-                          <!-- 막대 그래프 (추후 수정) -->
-                          
-                        </div>
-                        <!-- 추후 수정 -->
-                        <div class="progress-info">
-                          <div>
-                            <span>5,000,000원</span>
-                            <span>6,000,000원 목표</span>
-                          </div>
-                          <div>날짜 입력</div>
-                        </div>
-                      </div>
-                      <div class="last-donation-btn">
-                        <button type="button">
-                          <i
-                            src="./images/footer_facebook_gray80.svg"
-                            style="width: 10px; height: 10px"
-                          ></i>
-                          <span>하트 응원</span>
-                          <!-- 말풍선 : 추후 수정 -->
-                          <span class="cheering-ani">
-                            <span class="cheering-text-style">
-                              <em>카카오가 대신 100원</em>
-                              기부!
-                            </span>
+                <!-- 추후 js 파일 생성해서 반복문으로 수정할 예정 -->
+                <div class="money_cnt">
+                  <strong class="money_cnt_text">남은 금액</strong>
+                  <div class="money_cnt_all_div">
+                    <div class="money_cnt_cards_div">
+                      <span class="money_cnt_cards">
+                        <span class="money_cnt_card">
+                          <span class="card_top">5</span>
+                          <span class="card_bottom" data-value="5"></span>
+                          <span class="card_back" data-value="5">
+                            <span class="card_bottom" data-value="5"></span>
                           </span>
-                        </button>
-                        <button type="button">기부하기</button>
+                        </span>
+                        <span class="money_cnt_card">
+                          <span class="card_top">6</span>
+                          <span class="card_bottom" data-value="6"></span>
+                          <span class="card_back" data-value="6">
+                            <span class="card_bottom" data-value="6"></span>
+                          </span>
+                        </span>
+                        <span class="money_cnt_card">
+                          <span class="card_top">9</span>
+                          <span class="card_bottom" data-value="9"></span>
+                          <span class="card_back" data-value="9">
+                            <span class="card_bottom" data-value="9"></span>
+                          </span>
+                        </span>
+                        <span class="money_cnt_card">
+                          <span class="card_top">3</span>
+                          <span class="card_bottom" data-value="3"></span>
+                          <span class="card_back" data-value="3">
+                            <span class="card_bottom" data-value="3"></span>
+                          </span>
+                        </span>
+                        <span class="money_cnt_card">
+                          <span class="card_top">0</span>
+                          <span class="card_bottom" data-value="0"></span>
+                          <span class="card_back" data-value="0">
+                            <span class="card_bottom" data-value="0"></span>
+                          </span>
+                        </span>
+                        <span class="money_cnt_card">
+                          <span class="card_top">0</span>
+                          <span class="card_bottom" data-value="0"></span>
+                          <span class="card_back" data-value="0">
+                            <span class="card_bottom" data-value="0"></span>
+                          </span>
+                        </span>
+
+                      </span>
+                    </div>
+                    <strong class="money_cnt_text">원</strong>
+                  </div>
+
+                </div>
+
+                <div class="cnt-donation-content-out">
+                  <div class="cnt-donation-content">
+                    <div class="cnt-donation-left br-12">
+                      <!-- <div class="cnt-donation-money"></div> -->
+                      <div class="cnt-money-img">
                       </div>
                     </div>
+                    <div class="cnt-donation-right">
+                      <div class="cnt-donation-sub-title">
+                        <strong class="left-df-title-font">
+                          자립준비청년 우현이, 사회 첫걸음에 날개를 달아주세요!
+                        </strong>
+                        <div class="progress-container progress-main-top-container">
+                          <div class="progress-bar">
+                            <div class="current-progress-bar" style="width: 91%;"></div>
+                          </div>
+                          <div class="progress-info main-top-progress-info">
+                            <div class="progress-info-box">
+                              <span class="progress-info-money">5,430,700원</span>
+                              <span class="progress-money-goal">6,000,000원 목표</span>
+                            </div>
+                            <div class="progress-info-box">
+                              <span class="main-top-progress-percent">91%달성</span>
+                              <span class="main-top-progress-dday">2일 남음</span>
+                            </div>
+                          </div>
+                          
+                          <em class="em_end_box">종료임박</em>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="last-donation-btn">
+                    <button type="button">
+                      <!-- 추후 클릭시 애니메이션 추가 or 로그인 하시오라는 arlet창 띄우기 -->
+                      <i class="heart_icon"></i>
+                      <span>하트응원</span>
+                      <!-- 말풍선 : 추후 수정 -->
+                      <span class="cheering-ani">
+                        <span class="cheering-text-style">
+                          <em>카카오가 대신 100원</em>
+                          기부!
+                        </span>
+                      </span>
+                    </button>
+                    <button type="button">
+                      <span>기부하기</span>
+                    </button>
                   </div>
                 </div>
               </div>
               <!-- (End) last-donation -->
 
               <!-- (Start) 유사한 형태(2) : donation-list-div -->
+              <!-- js : 반복문 처리로 하기 -->
               <div class="left-div-style donation-list-div br-12">
-                <h4 class="donation-list-comment">
+                <h4 class="left-title-font-lh14">
                   ️가장 많이 기부 중인 모금함
                 </h4>
-                <p class="donation-list-text">
+                <p class="left-subtext-font-lh16">
                   오늘, 기부 하셨나요? 당신의 마음도 함께 나눠주세요!
                 </p>
                 <div class="many-donation-list">
@@ -154,10 +209,10 @@
                   <div class="many-donation">
                     <div class="many-money-img br-12"></div>
                     <div class="donation-list-item">
-                      <strong class="donation-list-sub-title"
+                      <strong class="left-df-title-font"
                         >생리대 걱정 없이 학교에 다니고 싶어요...</strong
                       >
-                      <span class="center-name">전주장애인종합복지관</span>
+                      <span class="df-subtext-font center-name">전주장애인종합복지관</span>
                       <div class="last-donation-goal">
                         <div class="bar-chart">
                           <!-- 막대 그래프 (추후 수정) -->
@@ -176,10 +231,10 @@
                   <div class="many-donation">
                     <div class="many-money-img br-12"></div>
                     <div class="donation-list-item">
-                      <strong class="donation-list-sub-title"
+                      <strong class="left-df-title-font"
                         >생리대 걱정 없이 학교에 다니고 싶어요...</strong
                       >
-                      <span class="center-name">전주장애인종합복지관</span>
+                      <span class="df-subtext-font center-name">전주장애인종합복지관</span>
                       <div class="last-donation-goal">
                         <div class="bar-chart">
                           <!-- 막대 그래프 (추후 수정) -->
@@ -198,10 +253,10 @@
                   <div class="many-donation">
                     <div class="many-money-img br-12"></div>
                     <div class="donation-list-item">
-                      <strong class="donation-list-sub-title"
+                      <strong class="left-df-title-font"
                         >생리대 걱정 없이 학교에 다니고 싶어요...</strong
                       >
-                      <span class="center-name">전주장애인종합복지관</span>
+                      <span class="df-subtext-font center-name">전주장애인종합복지관</span>
                       <div class="last-donation-goal">
                         <div class="bar-chart">
                           <!-- 막대 그래프 (추후 수정) -->
@@ -222,10 +277,10 @@
 
               <!-- (Start) 유사한 형태(1) : last-donation-->
               <div class="left-div-style last-donation cnt-time br-12">
-                <h4 class="last-donation-comment">
+                <h4 class="left-title-font-lh167">
                   ️시간이 얼마 남지 않았어요!
                 </h4>
-                <p class="last-donation-text">
+                <p class="left-subtext-font-lh16">
                   망설이면 끝! 조금만 더 힘을 보태주세요.
                 </p>
                 <div class="cnt-donation-content">
@@ -235,7 +290,7 @@
                   </div>
                   <div class="cnt-donation-right">
                     <div class="cnt-donation-sub-title">
-                      <strong> 제가 웃으면 엄마는 안 아프다고 하세요 </strong>
+                      <strong class="left-df-title-font"> 제가 웃으면 엄마는 안 아프다고 하세요 </strong>
                       <div class="last-donation-goal">
                         <div class="bar-chart">
                           <!-- 막대 그래프 (추후 수정) -->
@@ -274,20 +329,20 @@
 
               <!-- (Start) 유사한 형태(2) : donation-list-div -->
               <div class="left-div-style donation-list-div br-12">
-                <h4 class="donation-list-comment">️태그로 보는 모금함</h4>
+                <h4 class="left-title-font-lh14">️태그로 보는 모금함</h4>
                 <!-- 추후 버튼 클릭시 내용 변경 처리 -->
                 <div class="donation-list-tags">
-                  <button id="basic">#주거개선</button>
-                  <button>#어려운이유</button>
-                  <button>#건강한식생활</button>
-                  <button>#행복한노후</button>
+                  <button id="basic"># 주거개선</button>
+                  <button># 어려운이유</button>
+                  <button># 건강한식생활</button>
+                  <button># 행복한노후</button>
                 </div>
                 <div class="many-donation-list">
                   <!-- 아래 div는 추후 js로 반복 처리 예정 -->
                   <div class="many-donation">
                     <div class="many-money-img br-12"></div>
                     <div class="donation-list-item">
-                      <strong class="donation-list-sub-title"
+                      <strong class="left-df-title-font"
                         >생리대 걱정 없이 학교에 다니고 싶어요...</strong
                       >
                       <span class="center-name">전주장애인종합복지관</span>
@@ -309,7 +364,7 @@
                   <div class="many-donation">
                     <div class="many-money-img br-12"></div>
                     <div class="donation-list-item">
-                      <strong class="donation-list-sub-title"
+                      <strong class="left-df-title-font"
                         >생리대 걱정 없이 학교에 다니고 싶어요...</strong
                       >
                       <span class="center-name">전주장애인종합복지관</span>
@@ -331,7 +386,7 @@
                   <div class="many-donation">
                     <div class="many-money-img br-12"></div>
                     <div class="donation-list-item">
-                      <strong class="donation-list-sub-title"
+                      <strong class="left-df-title-font"
                         >생리대 걱정 없이 학교에 다니고 싶어요...</strong
                       >
                       <span class="center-name">전주장애인종합복지관</span>
