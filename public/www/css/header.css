@@ -21,9 +21,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: calc(100% - 20px);
-  max-width: 1120px;
-  /* width: 1120px; */
+  /* width: calc(100% - 20px);
+  max-width: 1120px; */
+  width: 1120px;
   height: 100%;
   margin: 0px auto;
 }
@@ -115,7 +115,7 @@
 .header-icon-list-menu svg {
 }
 
-@media all and (max-width: 1140px) {
+/* @media all and (max-width: 1140px) {
   .header {
     height: 92px;
   }
@@ -149,4 +149,4 @@
     position: absolute;
     top: 10px;
   }
-}
+} */
