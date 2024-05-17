@@ -23,9 +23,9 @@ window.addEventListener("load", function () {
                             </div>
                             
                             <div class="left-swiper-info">
-                              <strong>${data.card_title}</strong>
-                              <span>${data.card_subtext}</span>
-                              <button type="button" class="swiper-tag">
+                              <strong class="left-df-title-font">${data.card_title}</strong>
+                              <span class="df-subtext-font left-swiper-subtext">${data.card_subtext}</span>
+                              <button type="button" class="tag-df-font swiper-tag">
                                 <span>#</span>
                                 <span>모두의행동</span>
                               </button>
