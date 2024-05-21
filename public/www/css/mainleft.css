@@ -1,20 +1,3 @@
-/* progress {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: white;
-}
-
-progress::-webkit-progress-bar {
-  background-color: #eee;
-  border-radius: 10px;
-}
-
-progress::-webkit-progress-value {
-  background: linear-gradient(to top right, blue, lightgrey);
-  border-radius: 10px;
-} */
-
 .main-left {
   width: 700px;
   height: 100%;
@@ -31,12 +14,14 @@ progress::-webkit-progress-value {
   background-color: rgb(255, 255, 255);
 }
 
-.cnt-money {
+.cnt-money,
+.cnt-time {
   position: relative;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .left-title-font-lh14 {
+  cursor: pointer;
   font-family: "KakaoBig Bold", "Inter", "Noto Sans KR", sans-serif;
   font-size: 20px;
   font-style: normal;
@@ -60,7 +45,8 @@ progress::-webkit-progress-value {
   -webkit-font-smoothing: antialiased;
 }
 
-.money_cnt {
+.money_cnt,
+.time_cnt {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -77,6 +63,13 @@ progress::-webkit-progress-value {
   border-radius: 6px 6px 0px 0px;
 }
 
+.time_cnt {
+  justify-content: center;
+  padding: 0px;
+  border: 0px;
+  border-radius: 8px 8px 0px 0px;
+}
+
 .money_cnt_text {
   color: rgb(201, 201, 201);
   font-size: 14px;
@@ -91,9 +84,111 @@ progress::-webkit-progress-value {
   padding-left: 3px;
 }
 
-.money_cnt_all_div {
+.money_cnt_all_div,
+.time_cnt_all_div {
   display: flex;
   align-items: center;
+}
+
+.time_cnt_all_div {
+  gap: 4px;
+}
+
+.clock-div {
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  border-radius: 100%;
+  background-color: rgb(255, 64, 80);
+  opacity: 0.8;
+}
+
+.clock-column {
+  display: block;
+  position: absolute;
+  top: 9px;
+  width: 20px;
+  height: 2px;
+
+  animation-name: clockAnimation;
+  animation-duration: 3s;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+.clock-column::before {
+  display: block;
+  position: absolute;
+  right: 4px;
+  width: 6px;
+  height: 2px;
+  border-radius: 0px 999px 999px 0px;
+  background-color: rgb(255, 255, 255);
+  content: "";
+}
+
+.clock-row {
+  display: block;
+  position: absolute;
+  top: 9px;
+  width: 20px;
+  height: 2px;
+}
+
+.clock-row::before {
+  display: block;
+  position: absolute;
+  right: 4px;
+  width: 6px;
+  height: 2px;
+  border-radius: 0px 999px 999px 0px;
+  background-color: rgb(255, 255, 255);
+  content: "";
+}
+
+.clock-div::after {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 2px;
+  height: 2px;
+  margin: -1px 0px 0px -1px;
+  border-radius: 100%;
+  background-color: rgb(255, 255, 255);
+  content: "";
+}
+
+@keyframes clockAnimation {
+  0% {
+    transform: rotate(-90deg);
+  }
+  33% {
+    transform: rotate(-90deg);
+  }
+  66% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}
+
+.clock-time {
+  font-style: normal;
+  font-family: "KakaoBig Bold", "Inter", "Noto Sans KR", sans-serif;
+  overflow-wrap: break-word;
+  letter-spacing: -0.3px;
+  font-weight: 600;
+  line-height: 1;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
 }
 
 .left-df-title-font {
@@ -342,19 +437,29 @@ progress::-webkit-progress-value {
 .cnt-donation-money {
 }
 
-.cnt-money-img {
+.cnt-money-img,
+.cnt-time-img {
   width: 280px;
   height: 168px;
   /* border: 1px solid rgba(0, 0, 0, 0.03); */
 
-  background: url("../images/donation_img_01.jpg") no-repeat center;
   background-color: aqua;
-  background-size: 100%;
   cursor: pointer;
   border-radius: inherit;
 }
 
+.cnt-money-img {
+  background: url("../images/donation_img_01.jpg") no-repeat center;
+  background-size: 100%;
+}
+
+.cnt-time-img {
+  background: url("../images/donation_img_04.jpg") no-repeat center;
+  background-size: 100%;
+}
+
 .cnt-donation-right {
+  cursor: pointer;
   width: 100%;
   height: 100%;
   padding: 0 0 0 25px;
@@ -508,18 +613,6 @@ progress::-webkit-progress-value {
   font-weight: 700;
 }
 
-.cnt-time-img {
-  width: 280px;
-  height: 168px;
-  border: 1px solid rgba(0, 0, 0, 0.03);
-
-  background: url("../images/donation_img_04.jpg") no-repeat center;
-  background-color: aqua;
-  background-size: 100%;
-  cursor: pointer;
-  border-radius: inherit;
-}
-
 .donation-list-div {
 }
 
@@ -534,6 +627,7 @@ progress::-webkit-progress-value {
 }
 
 .many-donation {
+  cursor: pointer;
   width: 200px;
   height: auto;
   border-radius: inherit;
@@ -553,6 +647,23 @@ progress::-webkit-progress-value {
 
 .many-donation:nth-last-child(1) .many-money-img {
   background: url("../images/donation_img_03.jpg") no-repeat center;
+  background-size: 100%;
+}
+
+.many-money-img-2 {
+  width: 100%;
+  height: 137px;
+  background: url("../images/donation_img_07.jpg") no-repeat center;
+  background-size: 100%;
+}
+
+.many-donation:nth-last-child(2) .many-money-img-2 {
+  background: url("../images/donation_img_06.jpg") no-repeat center;
+  background-size: 100%;
+}
+
+.many-donation:nth-last-child(3) .many-money-img-2 {
+  background: url("../images/donation_img_05.jpg") no-repeat center;
   background-size: 100%;
 }
 
@@ -604,6 +715,10 @@ progress::-webkit-progress-value {
   line-height: 18px;
 }
 
+.donation-list-item > .progress-container {
+  padding-top: 8px;
+}
+
 .donation-list-tags {
   display: flex;
   gap: 6px;
@@ -635,13 +750,26 @@ progress::-webkit-progress-value {
   overflow-wrap: break-word;
 }
 
-.donation-list-tags > #basic {
+.donation-list-tags > .basic-btn {
   border: 1px solid rgb(32, 32, 32);
   background-color: rgb(32, 32, 32);
   font-size: 14px;
   font-family: "KakaoBig Bold", "Inter", "Noto Sans KR", sans-serif;
   color: rgb(255, 255, 255);
 }
+/* 
+.donation-list-tags > .div2 {
+  border: 1px solid;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.donation-list-tags > .clicked {
+  color: gold;
+} */
 
 .main-left-slide {
   position: relative;
@@ -911,6 +1039,10 @@ progress::-webkit-progress-value {
   border-radius: 999px;
 }
 
+.small-bar-height {
+  height: 2px;
+}
+
 .current-progress-bar {
   height: 100%;
   background-color: rgb(255, 64, 80);
@@ -994,6 +1126,15 @@ progress::-webkit-progress-value {
   letter-spacing: -0.1px;
 }
 
+.small-bar-info-div {
+  padding-top: 4px;
+}
+
+.small-bar-info-div .card-progress-text-style {
+  font-size: 12px;
+  line-height: 1.67;
+}
+
 .em_end_box {
   /* bottom: 0px; */
   font-style: normal;
@@ -1054,4 +1195,89 @@ progress::-webkit-progress-value {
   white-space: nowrap;
   padding: 0px;
   margin: 0px;
+}
+
+@media all and (max-width: 767px) and (min-width: 345px) {
+  .main-left {
+    width: 100%;
+  }
+
+  .left-div-style {
+    padding: 26px 20px 30px;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 15px 0px;
+  }
+
+  .money_cnt {
+    border-radius: 6px;
+    position: static;
+    margin-top: 12px;
+    width: 100%;
+  }
+
+  .cnt-donation-content-out {
+    padding-top: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: stretch;
+    margin: calc(-10px) 0px;
+    /* padding: calc(10px) 0px; */
+    height: auto;
+    width: 100%;
+    position: static;
+  }
+
+  .cnt-donation-content {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cnt-donation-left {
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+  }
+
+  .cnt-money-img {
+    /* background: url("../images/donation_img_01.jpg") no-repeat center; */
+    /* background-size: 100%; */
+
+    width: 100%;
+    padding-bottom: 50.85%;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    border-radius: 6px;
+  }
+
+  .cnt-donation-right {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px 0px;
+    position: relative;
+    flex: 1 0 auto;
+    overflow: visible;
+  }
+
+  .cnt-donation-sub-title > .left-df-title-font {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .progress-bar {
+    height: 6px;
+  }
+
+  .em_end_box {
+    top: -33px;
+    left: 10px;
+    font-size: 11px;
+    height: 23px;
+    padding: 0px 7px 2px;
+  }
+
+  .last-donation-btn {
+    position: static;
+    width: 100%;
+    padding: 6px;
+  }
 }
