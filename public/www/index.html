@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" main="width=device-width, initial-scale=1.0" />
     <title>카카오같이가치</title>
+    <!-- favicon : 원본 사이트랑 헷갈려서 주석처리 나중에 활성화 하기 -->
+    <!-- <link rel="icon" href="./images/favicon-16x16.png"/> -->
     <!-- 아이콘 -->
     <link
       rel="stylesheet"
@@ -31,10 +33,14 @@
     <script src="./js/header.js"></script>
     <!-- mainleftslide.js (담당자 : 김현주) -->
     <script src="./js/mainleftslide.js"></script>
+    <!-- timer.js (담당자 : 김현주) -->
+    <script src="./js/timer.js"></script>
     <!-- lastdonation.js (담당자 : 김현주) -->
     <script src="./js/lastdonation.js"></script>
     <!-- donationlist.js (담당자 : 김현주) -->
     <script src="./js/donationlist.js"></script>
+    <!-- tagclickevent.js (담당자 : 김현주) -->
+    <script src="./js/tagclickevent.js"></script>
     <!-- mainrightslide.js (담당자 : 박성호) -->
     <script src="./js/mainrightslide.js"></script>
   </head>
@@ -213,15 +219,17 @@
                         >생리대 걱정 없이 학교에 다니고 싶어요...</strong
                       >
                       <span class="df-subtext-font center-name">전주장애인종합복지관</span>
-                      <div class="last-donation-goal">
-                        <div class="bar-chart">
-                          <!-- 막대 그래프 (추후 수정) -->
+                      <div class="progress-container">
+                        <div class="progress-bar small-bar-height">
+                          <div class="current-progress-bar" style="width: 67%;"></div>
                         </div>
-                        <!-- 추후 수정 -->
-                        <div class="progress-info">
+
+                        <div class="progress-info small-bar-info-div">
                           <div>
-                            <span>5,000,000원</span>
-                            <span>41%</span>
+                            <span class="progress-info-money card-progress-text-style">6,587,134원</span>
+                          </div>
+                          <div>
+                            <span class="progress-info-percent card-progress-text-style">67%</span>
                           </div>
                         </div>
                       </div>
@@ -232,18 +240,20 @@
                     <div class="many-money-img br-12"></div>
                     <div class="donation-list-item">
                       <strong class="left-df-title-font"
-                        >생리대 걱정 없이 학교에 다니고 싶어요...</strong
+                        >자립준비청년 우현이, 사회 첫걸음에 날개를 달아주세요!</strong
                       >
-                      <span class="df-subtext-font center-name">전주장애인종합복지관</span>
-                      <div class="last-donation-goal">
-                        <div class="bar-chart">
-                          <!-- 막대 그래프 (추후 수정) -->
+                      <span class="df-subtext-font center-name">남양주시 사회복지관 서부희망케어센터</span>
+                      <div class="progress-container">
+                        <div class="progress-bar small-bar-height">
+                          <div class="current-progress-bar" style="width: 91%;"></div>
                         </div>
-                        <!-- 추후 수정 -->
-                        <div class="progress-info">
+
+                        <div class="progress-info small-bar-info-div">
                           <div>
-                            <span>5,000,000원</span>
-                            <span>41%</span>
+                            <span class="progress-info-money card-progress-text-style">5,430,100원</span>
+                          </div>
+                          <div>
+                            <span class="progress-info-percent card-progress-text-style">91%</span>
                           </div>
                         </div>
                       </div>
@@ -254,18 +264,20 @@
                     <div class="many-money-img br-12"></div>
                     <div class="donation-list-item">
                       <strong class="left-df-title-font"
-                        >생리대 걱정 없이 학교에 다니고 싶어요...</strong
+                        >여성 발달장애인 '드림걸스'의 꿈을 응원해 주세요!</strong
                       >
-                      <span class="df-subtext-font center-name">전주장애인종합복지관</span>
-                      <div class="last-donation-goal">
-                        <div class="bar-chart">
-                          <!-- 막대 그래프 (추후 수정) -->
+                      <span class="df-subtext-font center-name">양평군 장애인복지관</span>
+                      <div class="progress-container">
+                        <div class="progress-bar small-bar-height">
+                          <div class="current-progress-bar" style="width: 70%;"></div>
                         </div>
-                        <!-- 추후 수정 -->
-                        <div class="progress-info">
+
+                        <div class="progress-info small-bar-info-div">
                           <div>
-                            <span>5,000,000원</span>
-                            <span>41%</span>
+                            <span class="progress-info-money card-progress-text-style">1,040,000원</span>
+                          </div>
+                          <div>
+                            <span class="progress-info-percent card-progress-text-style">70%</span>
                           </div>
                         </div>
                       </div>
@@ -283,45 +295,65 @@
                 <p class="left-subtext-font-lh16">
                   망설이면 끝! 조금만 더 힘을 보태주세요.
                 </p>
-                <div class="cnt-donation-content">
-                  <div class="cnt-donation-left br-12">
-                    <div class="cnt-donation-money"></div>
-                    <div class="cnt-time-img"></div>
+
+
+                <div class="time_cnt">
+                  <div class="time_cnt_all_div">
+                    <div class="clock-div">
+                      <span class="clock-column"></span>
+                      <span class="clock-row"></span>
+                    </div>
+                    <em id="clock-timer">
+                      <div class="clock-time"></div>
+                    </em>
                   </div>
-                  <div class="cnt-donation-right">
-                    <div class="cnt-donation-sub-title">
-                      <strong class="left-df-title-font"> 제가 웃으면 엄마는 안 아프다고 하세요 </strong>
-                      <div class="last-donation-goal">
-                        <div class="bar-chart">
-                          <!-- 막대 그래프 (추후 수정) -->
-                        </div>
-                        <!-- 추후 수정 -->
-                        <div class="progress-info">
-                          <div>
-                            <span>5,000,000원</span>
-                            <span>6,000,000원 목표</span>
+                </div>
+
+                <div class="cnt-donation-content-out">
+                  <div class="cnt-donation-content">
+                    <div class="cnt-donation-left br-12">
+                      <div class="cnt-donation-money"></div>
+                      <div class="cnt-time-img"></div>
+                    </div>
+                    <div class="cnt-donation-right">
+                      <div class="cnt-donation-sub-title">
+                        <strong class="left-df-title-font"> 제가 웃으면 엄마는 안 아프다고 하세요 </strong>
+                        <div class="progress-container progress-main-top-container">
+                          <div class="progress-bar">
+                            <div class="current-progress-bar" style="width: 78%;"></div>
                           </div>
-                          <div>날짜 입력</div>
+                          <div class="progress-info main-top-progress-info">
+                            <div class="progress-info-box">
+                              <span class="progress-info-money">3,898,303원</span>
+                              <span class="progress-money-goal">5,000,000원 목표</span>
+                            </div>
+                            <div class="progress-info-box">
+                              <span class="main-top-progress-percent">78%달성</span>
+                              <span class="main-top-progress-dday">0일 남음</span>
+                            </div>
+                          </div>
+                          
+                          <em class="em_end_box">종료임박</em>
                         </div>
-                      </div>
-                      <div class="last-donation-btn">
-                        <button type="button">
-                          <i
-                            src="./images/footer_facebook_gray80.svg"
-                            style="width: 10px; height: 10px"
-                          ></i>
-                          <span>하트 응원</span>
-                          <!-- 말풍선 : 추후 수정 -->
-                          <span class="cheering-ani">
-                            <span class="cheering-text-style">
-                              <em>카카오가 대신 100원</em>
-                              기부!
-                            </span>
-                          </span>
-                        </button>
-                        <button type="button">기부하기</button>
                       </div>
                     </div>
+                  </div>
+                  <div class="last-donation-btn">
+                    <button type="button">
+                      <!-- 추후 클릭시 애니메이션 추가 or 로그인 하시오라는 arlet창 띄우기 -->
+                      <i class="heart_icon"></i>
+                      <span>하트응원</span>
+                      <!-- 말풍선 : 추후 수정 -->
+                      <span class="cheering-ani">
+                        <span class="cheering-text-style">
+                          <em>카카오가 대신 100원</em>
+                          기부!
+                        </span>
+                      </span>
+                    </button>
+                    <button type="button">
+                      <span>기부하기</span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -332,29 +364,54 @@
                 <h4 class="left-title-font-lh14">️태그로 보는 모금함</h4>
                 <!-- 추후 버튼 클릭시 내용 변경 처리 -->
                 <div class="donation-list-tags">
-                  <button id="basic"># 주거개선</button>
-                  <button># 어려운이유</button>
-                  <button># 건강한식생활</button>
-                  <button># 행복한노후</button>
+                  <button class="basic-btn sub-btn"># 주거개선</button>
+                  <button class="sub-btn"># 어려운이유</button>
+                  <button class="sub-btn"># 건강한식생활</button>
+                  <button class="sub-btn"># 행복한노후</button>
                 </div>
                 <div class="many-donation-list">
                   <!-- 아래 div는 추후 js로 반복 처리 예정 -->
                   <div class="many-donation">
-                    <div class="many-money-img br-12"></div>
+                    <div class="many-money-img-2 br-12"></div>
                     <div class="donation-list-item">
                       <strong class="left-df-title-font"
-                        >생리대 걱정 없이 학교에 다니고 싶어요...</strong
+                        >폭염 속 어르신을 위한 시원 쿨쿨 여름이불 나눔 프로젝트</strong
                       >
-                      <span class="center-name">전주장애인종합복지관</span>
-                      <div class="last-donation-goal">
-                        <div class="bar-chart">
-                          <!-- 막대 그래프 (추후 수정) -->
+                      <span class="df-subtext-font center-name">강남구립 강남시니어플라자</span>
+                      <div class="progress-container">
+                        <div class="progress-bar small-bar-height">
+                          <div class="current-progress-bar" style="width: 1%;"></div>
                         </div>
-                        <!-- 추후 수정 -->
-                        <div class="progress-info">
+
+                        <div class="progress-info small-bar-info-div">
                           <div>
-                            <span>5,000,000원</span>
-                            <span>41%</span>
+                            <span class="progress-info-money card-progress-text-style">1,900원</span>
+                          </div>
+                          <div>
+                            <span class="progress-info-percent card-progress-text-style">1%</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="many-donation">
+                    <div class="many-money-img-2 br-12"></div>
+                    <div class="donation-list-item">
+                      <strong class="left-df-title-font"
+                        >장애가 있는 손자의 엄마로 산다는 것</strong
+                      >
+                      <span class="df-subtext-font center-name">사회복지법인 어린이재단</span>
+                      <div class="progress-container">
+                        <div class="progress-bar small-bar-height">
+                          <div class="current-progress-bar" style="width: 22%;"></div>
+                        </div>
+
+                        <div class="progress-info small-bar-info-div">
+                          <div>
+                            <span class="progress-info-money card-progress-text-style">2,157,770원</span>
+                          </div>
+                          <div>
+                            <span class="progress-info-percent card-progress-text-style">22%</span>
                           </div>
                         </div>
                       </div>
@@ -362,43 +419,23 @@
                   </div>
 
                   <div class="many-donation">
-                    <div class="many-money-img br-12"></div>
+                    <div class="many-money-img-2 br-12"></div>
                     <div class="donation-list-item">
                       <strong class="left-df-title-font"
-                        >생리대 걱정 없이 학교에 다니고 싶어요...</strong
+                        >취약계층 환경개선 집수리 사업에 동참해 주세요</strong
                       >
-                      <span class="center-name">전주장애인종합복지관</span>
-                      <div class="last-donation-goal">
-                        <div class="bar-chart">
-                          <!-- 막대 그래프 (추후 수정) -->
+                      <span class="df-subtext-font center-name">사단법인 함께웃는세상</span>
+                      <div class="progress-container">
+                        <div class="progress-bar small-bar-height">
+                          <div class="current-progress-bar" style="width: 8%;"></div>
                         </div>
-                        <!-- 추후 수정 -->
-                        <div class="progress-info">
-                          <div>
-                            <span>5,000,000원</span>
-                            <span>41%</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
 
-                  <div class="many-donation">
-                    <div class="many-money-img br-12"></div>
-                    <div class="donation-list-item">
-                      <strong class="left-df-title-font"
-                        >생리대 걱정 없이 학교에 다니고 싶어요...</strong
-                      >
-                      <span class="center-name">전주장애인종합복지관</span>
-                      <div class="last-donation-goal">
-                        <div class="bar-chart">
-                          <!-- 막대 그래프 (추후 수정) -->
-                        </div>
-                        <!-- 추후 수정 -->
-                        <div class="progress-info">
+                        <div class="progress-info small-bar-info-div">
                           <div>
-                            <span>5,000,000원</span>
-                            <span>41%</span>
+                            <span class="progress-info-money card-progress-text-style">498,600원</span>
+                          </div>
+                          <div>
+                            <span class="progress-info-percent card-progress-text-style">8%</span>
                           </div>
                         </div>
                       </div>

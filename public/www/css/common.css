@@ -41,6 +41,7 @@ body {
   overflow-wrap: break-word;
   background-color: rgb(247, 247, 247);
 }
+
 .wrap {
   padding-top: 70px;
   margin: 0 10px;
@@ -48,4 +49,13 @@ body {
 
 .br-12 {
   border-radius: 12px;
+}
+
+@media all and (max-width: 767px) and (min-width: 345px) {
+  /* body {
+    overflow-x: hidden;
+  } */
+  .wrap {
+    margin: 0 20px;
+  }
 }
